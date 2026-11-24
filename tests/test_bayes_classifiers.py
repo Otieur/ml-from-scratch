@@ -3,8 +3,8 @@ import numpy as np
 import pytest
 from sklearn.naive_bayes import BernoulliNB, GaussianNB
 
-from mlscratch.gaussian_classifier import GaussianClassConditional
-from mlscratch.naive_bayes import BernoulliNaiveBayes
+from cscc11.gaussian_classifier import GaussianClassConditional
+from cscc11.naive_bayes import BernoulliNaiveBayes
 
 
 def count_data(seed=0, n=300, d=40, classes=4):

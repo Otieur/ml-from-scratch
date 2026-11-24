@@ -9,8 +9,8 @@ from sklearn.datasets import load_digits
 from sklearn.neural_network import MLPClassifier
 
 from experiments.common import OUT, save_metrics
-from mlscratch.model_selection import stratified_split
-from mlscratch.neural_network import NeuralNetwork
+from cscc11.model_selection import stratified_split
+from cscc11.neural_network import NeuralNetwork
 
 TRAINING = dict(epochs=60, batch_size=32, learning_rate=0.05, momentum=0.9)
 L2 = 1e-4

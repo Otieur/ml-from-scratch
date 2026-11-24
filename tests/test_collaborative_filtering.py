@@ -3,7 +3,7 @@ import numpy as np
 import pytest
 from sklearn.linear_model import Ridge
 
-from mlscratch.collaborative_filtering import MatrixFactorization, rmse
+from cscc11.collaborative_filtering import MatrixFactorization, rmse
 
 
 def low_rank_ratings(seed=0, n_users=60, n_items=40, rank=3, observed=0.6, noise=0.0):
@@ -34,7 +34,7 @@ def test_one_user_update_is_a_ridge_regression():
     users, items, ratings, _ = low_rank_ratings(seed=1)
     model = MatrixFactorization(n_factors=4, l2=2.5, n_sweeps=3).fit(users, items, ratings)
     # Redo the user half-sweep with the fitted item side, then compare one user with scikit-learn.
-    from mlscratch.collaborative_filtering import _groups, _solve_side
+    from cscc11.collaborative_filtering import _groups, _solve_side
 
     by_user = _groups(users, users.max() + 1)
     offsets, factors = _solve_side(ratings - model.mean_ - model.item_offset_[items],

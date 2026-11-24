@@ -4,7 +4,7 @@ import pytest
 from sklearn.base import BaseEstimator, ClassifierMixin
 from sklearn.ensemble import AdaBoostClassifier
 
-from mlscratch.adaboost import AdaBoost, best_stump, stump_predict
+from cscc11.adaboost import AdaBoost, best_stump, stump_predict
 
 # Ten points on a line that no single threshold separates.
 LINE_X = np.arange(10, dtype=np.float64).reshape(-1, 1)

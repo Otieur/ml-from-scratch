@@ -4,11 +4,11 @@ import pytest
 from sklearn.decomposition import PCA as SklearnPCA
 from sklearn.neighbors import KNeighborsClassifier
 
-from mlscratch.model_selection import (
+from cscc11.model_selection import (
     Standardizer, best_k, cross_validate_knn, k_fold_indices, prepare, stratified_split,
 )
-from mlscratch.knn import KNNClassifier, nearest_neighbours, neighbour_order, squared_distances, vote
-from mlscratch.pca import PCA
+from cscc11.knn import KNNClassifier, nearest_neighbours, neighbour_order, squared_distances, vote
+from cscc11.pca import PCA
 
 
 def two_classes(seed=0, n=240, d=12):

@@ -9,8 +9,8 @@ from sklearn.datasets import load_breast_cancer
 from sklearn.linear_model import LogisticRegression
 
 from experiments.common import OUT, save_metrics
-from mlscratch import logistic_regression as lr
-from mlscratch.model_selection import Standardizer, stratified_split
+from cscc11 import logistic_regression as lr
+from cscc11.model_selection import Standardizer, stratified_split
 
 L2 = 1.0
 

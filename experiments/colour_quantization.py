@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from experiments.common import OUT, save_metrics
-from mlscratch.gmm import gmm_cluster
-from mlscratch.imaging import apply_palette, indexed_png_size, load_sample, png_size, psnr
-from mlscratch.kmeans import kmeans
+from cscc11.gmm import gmm_cluster
+from cscc11.imaging import apply_palette, indexed_png_size, load_sample, png_size, psnr
+from cscc11.kmeans import kmeans
 
 IMAGE = "china.jpg"
 

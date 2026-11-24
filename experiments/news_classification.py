@@ -3,10 +3,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from experiments.common import OUT, save_metrics
-from mlscratch.datasets import load_bbc
-from mlscratch.gaussian_classifier import GaussianClassConditional
-from mlscratch.model_selection import k_fold_indices, stratified_split
-from mlscratch.naive_bayes import BernoulliNaiveBayes
+from cscc11.datasets import load_bbc
+from cscc11.gaussian_classifier import GaussianClassConditional
+from cscc11.model_selection import k_fold_indices, stratified_split
+from cscc11.naive_bayes import BernoulliNaiveBayes
 
 VAR_SMOOTHING_GRID = (1e-9, 1e-6, 1e-4, 1e-3, 3e-3, 1e-2, 1e-1)
 

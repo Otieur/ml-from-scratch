@@ -7,10 +7,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from experiments.common import OUT, save_metrics
-from mlscratch.datasets import load_speech_emotion, log_mel
-from mlscratch.knn import KNNClassifier
-from mlscratch.model_selection import best_k, cross_validate_knn, prepare, stratified_split
-from mlscratch.pca import PCA
+from cscc11.datasets import load_speech_emotion, log_mel
+from cscc11.knn import KNNClassifier
+from cscc11.model_selection import best_k, cross_validate_knn, prepare, stratified_split
+from cscc11.pca import PCA
 
 K_VALUES = [1, 3, 5, 7, 9, 11, 15, 21, 31]
 PCA_VARIANCE = 0.95

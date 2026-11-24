@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 
 from experiments.common import OUT, save_metrics
-from mlscratch.voting import ensemble_error, simulate_ensemble_error
+from cscc11.voting import ensemble_error, simulate_ensemble_error
 
 
 def main():

@@ -8,7 +8,7 @@ with mixing weights pi (K,), means mu (K, D) and full covariances Sigma (K, D, D
 """
 import numpy as np
 
-from mlscratch.kmeans import kmeans
+from cscc11.kmeans import kmeans
 
 
 def log_gaussian(X, mean, cov):

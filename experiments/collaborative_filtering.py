@@ -10,8 +10,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from experiments.common import OUT, save_metrics
-from mlscratch.collaborative_filtering import MatrixFactorization, rmse
-from mlscratch.datasets import load_movielens
+from cscc11.collaborative_filtering import MatrixFactorization, rmse
+from cscc11.datasets import load_movielens
 
 N_USERS, N_ITEMS = 943, 1682
 FACTORS = (0, 5, 10, 20, 40)

@@ -2,8 +2,8 @@
 import numpy as np
 from sklearn.linear_model import Ridge
 
-from mlscratch.inpainting import colour_mask, inpaint
-from mlscratch.rbf import RBFRegression
+from cscc11.inpainting import colour_mask, inpaint
+from cscc11.rbf import RBFRegression
 
 
 def random_problem(seed=0, n=200, grid=4):

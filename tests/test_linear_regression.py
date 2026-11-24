@@ -4,8 +4,8 @@ import pytest
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
-from mlscratch.datasets import load_admissions
-from mlscratch.linear_regression import add_bias, fit_least_squares, mean_squared_error, predict, r_squared
+from cscc11.datasets import load_admissions
+from cscc11.linear_regression import add_bias, fit_least_squares, mean_squared_error, predict, r_squared
 
 
 def test_admissions_data_has_the_expected_shape():

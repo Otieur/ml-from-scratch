@@ -3,8 +3,8 @@ import numpy as np
 import pytest
 from sklearn.linear_model import LogisticRegression
 
-from mlscratch import logistic_regression as lr
-from mlscratch.voting import ensemble_error, simulate_ensemble_error
+from cscc11 import logistic_regression as lr
+from cscc11.voting import ensemble_error, simulate_ensemble_error
 
 # A seven-point problem small enough to work through by hand: two features, binary label.
 TOY_X = np.array([[4, 4], [6, 4], [6, 5], [6, 8], [6, 10], [8, 8], [8, 10]], dtype=np.float64)

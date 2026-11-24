@@ -6,8 +6,8 @@ influences the model that is scored on it.
 """
 import numpy as np
 
-from mlscratch.knn import neighbour_order, vote
-from mlscratch.pca import PCA
+from cscc11.knn import neighbour_order, vote
+from cscc11.pca import PCA
 
 
 def stratified_split(y, test_size, seed):

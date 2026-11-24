@@ -4,7 +4,7 @@ import pytest
 from sklearn.datasets import load_digits, load_iris
 from sklearn.linear_model import LogisticRegression
 
-from mlscratch.neural_network import NeuralNetwork, softmax
+from cscc11.neural_network import NeuralNetwork, softmax
 
 
 def small_problem(seed=0, n=30, d=5, classes=3):

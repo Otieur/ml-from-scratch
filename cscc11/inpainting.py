@@ -7,7 +7,7 @@ is then evaluated at the missing pixels.
 """
 import numpy as np
 
-from mlscratch.rbf import RBFRegression
+from cscc11.rbf import RBFRegression
 
 
 def colour_mask(image, colour, tolerance=0.1):

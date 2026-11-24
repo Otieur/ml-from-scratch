@@ -9,8 +9,8 @@ from sklearn.datasets import load_breast_cancer
 from sklearn.ensemble import AdaBoostClassifier
 
 from experiments.common import OUT, save_metrics
-from mlscratch.adaboost import AdaBoost
-from mlscratch.model_selection import stratified_split
+from cscc11.adaboost import AdaBoost
+from cscc11.model_selection import stratified_split
 
 ROUNDS = 300
 CHECKPOINTS = (1, 10, 50, 100, 300)

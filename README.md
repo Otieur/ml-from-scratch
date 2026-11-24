@@ -1,4 +1,4 @@
-# Machine learning from scratch
+# CSCC11 Machine Learning
 
 Regression, clustering, classification and recommendation algorithms written from their
 definitions in NumPy, without library implementations, and each checked against an
@@ -276,7 +276,7 @@ Every random choice is seeded, so the numbers in `results/metrics.json` reproduc
 ## Layout
 
 ```
-mlscratch/      linear_regression, rbf, inpainting, kmeans, gmm, logistic_regression, naive_bayes,
+cscc11/         linear_regression, rbf, inpainting, kmeans, gmm, logistic_regression, naive_bayes,
                 gaussian_classifier, knn, pca, svm, adaboost, neural_network, collaborative_filtering,
                 model_selection, voting, imaging, datasets
 experiments/    one script per experiment; `python -m experiments` runs them all

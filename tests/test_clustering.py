@@ -4,9 +4,9 @@ import pytest
 from sklearn.cluster import KMeans
 from sklearn.mixture import GaussianMixture
 
-from mlscratch.gmm import e_step, fit_gmm, gmm_cluster, log_gaussian
-from mlscratch.imaging import apply_palette, indexed_png_size, load_sample, png_size, psnr
-from mlscratch.kmeans import kmeans
+from cscc11.gmm import e_step, fit_gmm, gmm_cluster, log_gaussian
+from cscc11.imaging import apply_palette, indexed_png_size, load_sample, png_size, psnr
+from cscc11.kmeans import kmeans
 
 
 def three_blobs(seed=0, n=300):

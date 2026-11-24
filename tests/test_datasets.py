@@ -2,7 +2,7 @@
 import numpy as np
 import pytest
 
-from mlscratch.datasets import (BBC_DIR, MOVIELENS_DIR, SPEECH_CACHE, SPEECH_DIR, load_bbc, load_movielens,
+from cscc11.datasets import (BBC_DIR, MOVIELENS_DIR, SPEECH_CACHE, SPEECH_DIR, load_bbc, load_movielens,
                                 load_speech_emotion, log_mel)
 
 needs_bbc = pytest.mark.skipif(not (BBC_DIR / "bbc.mtx").exists(), reason="run scripts/fetch_data.py bbc")
@@ -41,9 +41,9 @@ def test_bbc_matrix_is_read_with_the_right_orientation(bbc):
 
 @needs_bbc
 def test_both_classifiers_reach_the_recorded_accuracy_on_bbc(bbc):
-    from mlscratch.gaussian_classifier import GaussianClassConditional
-    from mlscratch.model_selection import stratified_split
-    from mlscratch.naive_bayes import BernoulliNaiveBayes
+    from cscc11.gaussian_classifier import GaussianClassConditional
+    from cscc11.model_selection import stratified_split
+    from cscc11.naive_bayes import BernoulliNaiveBayes
     from sklearn.naive_bayes import BernoulliNB
 
     counts, labels, *_ = bbc
@@ -109,7 +109,7 @@ def test_movielens_sizes_and_splits():
 
 @needs_movielens
 def test_factorization_beats_the_offsets_on_movielens():
-    from mlscratch.collaborative_filtering import MatrixFactorization, rmse
+    from cscc11.collaborative_filtering import MatrixFactorization, rmse
 
     (users, items, ratings), (test_users, test_items, test_ratings) = load_movielens(1)
     offsets = MatrixFactorization(n_factors=0, l2=5.0, n_sweeps=10).fit(users, items, ratings, 943, 1682)

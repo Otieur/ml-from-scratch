@@ -11,8 +11,8 @@ from sklearn.multiclass import OneVsRestClassifier
 from sklearn.svm import SVC
 
 from experiments.common import OUT, save_metrics
-from mlscratch.model_selection import stratified_split
-from mlscratch.svm import SVM, OneVsRestSVM
+from cscc11.model_selection import stratified_split
+from cscc11.svm import SVM, OneVsRestSVM
 
 MOONS = {"linear": dict(C=1.0, kernel="linear"), "rbf": dict(C=1.0, kernel="rbf", gamma=1.0)}
 

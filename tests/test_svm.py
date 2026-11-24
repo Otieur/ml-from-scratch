@@ -3,7 +3,7 @@ import numpy as np
 import pytest
 from sklearn.svm import SVC
 
-from mlscratch.svm import SVM, OneVsRestSVM, linear_kernel, rbf_kernel
+from cscc11.svm import SVM, OneVsRestSVM, linear_kernel, rbf_kernel
 
 
 def two_blobs(seed=0, n=120, gap=1.0):

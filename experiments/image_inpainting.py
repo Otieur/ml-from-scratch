@@ -10,8 +10,8 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 from experiments.common import OUT, save_metrics
-from mlscratch.imaging import load_sample, psnr
-from mlscratch.inpainting import colour_mask, inpaint
+from cscc11.imaging import load_sample, psnr
+from cscc11.inpainting import colour_mask, inpaint
 
 DEFAULTS = {"spacing": 3, "width": 2, "l2": 0.5}
 LINES = ["Radial basis functions", "fill in the missing pixels", "one patch at a time,",

@@ -4,8 +4,8 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 
 from experiments.common import OUT, save_metrics
-from mlscratch.datasets import load_admissions
-from mlscratch.linear_regression import fit_least_squares, mean_squared_error, predict, r_squared
+from cscc11.datasets import load_admissions
+from cscc11.linear_regression import fit_least_squares, mean_squared_error, predict, r_squared
 
 
 def main():
