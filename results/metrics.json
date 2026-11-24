@@ -1,4 +1,41 @@
 {
+  "adaboost": {
+    "first_round_with_no_training_error": 16,
+    "n_test": 171,
+    "n_train": 398,
+    "repeated_splits_100_rounds": {
+      "mean_test_accuracy": 0.9710526315789473,
+      "n": 20,
+      "std_test_accuracy": 0.010538491983005903
+    },
+    "rounds": 300,
+    "samples": 569,
+    "scikit_learn_test_accuracy": 0.9590643274853801,
+    "test_accuracy_by_rounds": {
+      "1": 0.8830409356725146,
+      "10": 0.9473684210526316,
+      "100": 0.9590643274853801,
+      "300": 0.9590643274853801,
+      "50": 0.9532163742690059
+    },
+    "train_accuracy_by_rounds": {
+      "1": 0.9346733668341709,
+      "10": 0.9899497487437185,
+      "100": 1.0,
+      "300": 1.0,
+      "50": 1.0
+    },
+    "vote_share": {
+      "compactness error": 0.06594493361638101,
+      "mean concave points": 0.08408989735732449,
+      "mean concavity": 0.072673292512261,
+      "worst area": 0.08636350721500217,
+      "worst concave points": 0.05056904989684024,
+      "worst concavity": 0.05604893667720275,
+      "worst smoothness": 0.06695542412731573,
+      "worst texture": 0.1071231442673592
+    }
+  },
   "admissions_regression": {
     "baseline_test_mse": 0.023164175170068028,
     "bias": -1.2841780563001723,
@@ -32,6 +69,80 @@
       "SOP": 0.0009946942617102778,
       "TOEFL Score": 0.0031707223988402026,
       "University Rating": 0.004866255200304084
+    }
+  },
+  "collaborative_filtering": {
+    "chosen": {
+      "l2": 10.0,
+      "n_factors": 5,
+      "offsets_l2": 2.0
+    },
+    "items": 1682,
+    "ratings": 100000,
+    "seconds_per_fit": 1.9390511082019657,
+    "sweeps": 15,
+    "test_rmse": {
+      "factorization": {
+        "mean": 0.9130317258832662,
+        "splits": [
+          0.9280766771433073,
+          0.911903413916634,
+          0.9069067544625686,
+          0.9071989562482046,
+          0.9110728276456168
+        ],
+        "std": 0.007784566849049257
+      },
+      "mean rating": {
+        "mean": 1.1255782065063082,
+        "splits": [
+          1.1536759477860323,
+          1.13066381946901,
+          1.111582280538085,
+          1.1132936843691559,
+          1.1186753003692582
+        ],
+        "std": 0.01555501247323064
+      },
+      "offsets": {
+        "mean": 0.9414593434307715,
+        "splits": [
+          0.9534452779567236,
+          0.9434871544100131,
+          0.9377607860258715,
+          0.9366835358638739,
+          0.9359199628973757
+        ],
+        "std": 0.006556630923196539
+      }
+    },
+    "users": 943,
+    "validation_rmse": {
+      "0 factors, penalty 10": 0.9337519197703392,
+      "0 factors, penalty 15": 0.9370454307794873,
+      "0 factors, penalty 2": 0.9307310125393932,
+      "0 factors, penalty 25": 0.9437919386931016,
+      "0 factors, penalty 5": 0.9310684507222339,
+      "10 factors, penalty 10": 0.9117663206924849,
+      "10 factors, penalty 15": 0.9105311159619309,
+      "10 factors, penalty 2": 0.9930832181070504,
+      "10 factors, penalty 25": 0.9319034731695086,
+      "10 factors, penalty 5": 0.9424373692820547,
+      "20 factors, penalty 10": 0.9239729171352762,
+      "20 factors, penalty 15": 0.9117524126491426,
+      "20 factors, penalty 2": 1.0629423968560243,
+      "20 factors, penalty 25": 0.9317677647067576,
+      "20 factors, penalty 5": 0.9783993396139199,
+      "40 factors, penalty 10": 0.9191485997204165,
+      "40 factors, penalty 15": 0.9106032196227497,
+      "40 factors, penalty 2": 1.0986507009046496,
+      "40 factors, penalty 25": 0.9316905837497106,
+      "40 factors, penalty 5": 0.9817024950488764,
+      "5 factors, penalty 10": 0.9093456805114132,
+      "5 factors, penalty 15": 0.9123164843240903,
+      "5 factors, penalty 2": 0.9422920124090262,
+      "5 factors, penalty 25": 0.9320874593713685,
+      "5 factors, penalty 5": 0.9150867311820186
     }
   },
   "colour_quantization": {
@@ -1263,6 +1374,32 @@
       }
     }
   },
+  "neural_network": {
+    "batch_size": 32,
+    "epochs": 60,
+    "hidden_64": {
+      "final_loss": 0.022931606831753742,
+      "mistakes": 19,
+      "most_confused": [
+        "8 read as 1: 5",
+        "0 read as 4: 2",
+        "9 read as 8: 2"
+      ],
+      "test_accuracy": 0.9647495361781077,
+      "train_accuracy": 1.0
+    },
+    "l2": 0.0001,
+    "learning_rate": 0.05,
+    "momentum": 0.9,
+    "n_test": 539,
+    "n_train": 1258,
+    "samples": 1797,
+    "scikit_learn_mlp_test_accuracy": 0.974025974025974,
+    "softmax_regression": {
+      "test_accuracy": 0.9573283858998145,
+      "train_accuracy": 0.9880763116057234
+    }
+  },
   "news_classification": {
     "class_sizes": {
       "business": 510,
@@ -1695,6 +1832,49 @@
           "std_test_accuracy": 0.017782289781343535
         },
         "test_accuracy": 0.7565217391304347
+      }
+    }
+  },
+  "svm": {
+    "digits": {
+      "C": 10.0,
+      "gamma": 0.11036316542658346,
+      "linear_kernel_test_accuracy": 0.9517625231910947,
+      "n_test": 539,
+      "n_train": 1258,
+      "predictions_equal_to_scikit_learn": true,
+      "samples": 1797,
+      "scikit_learn_test_accuracy": 0.9907235621521335,
+      "support_vectors_per_machine": [
+        46,
+        92,
+        90,
+        102,
+        73,
+        82,
+        65,
+        76,
+        138,
+        113
+      ],
+      "test_accuracy": 0.9907235621521335
+    },
+    "moons": {
+      "linear": {
+        "largest_difference_from_scikit_learn": 1.6748747988515333e-07,
+        "support_vectors": 136,
+        "test_accuracy": 0.8605,
+        "train_accuracy": 0.8675,
+        "updates": 372
+      },
+      "n_test": 2000,
+      "n_train": 400,
+      "rbf": {
+        "largest_difference_from_scikit_learn": 1.2764194092573788e-05,
+        "support_vectors": 100,
+        "test_accuracy": 0.9335,
+        "train_accuracy": 0.925,
+        "updates": 557
       }
     }
   }

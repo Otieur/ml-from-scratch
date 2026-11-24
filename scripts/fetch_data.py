@@ -1,8 +1,8 @@
-"""Download the two public data sets used by the experiments into data/ (not committed).
+"""Download the three public data sets used by the experiments into data/ (not committed).
 
 Usage (from the repository root):
-    python scripts/fetch_data.py            # both
-    python scripts/fetch_data.py bbc        # one of: bbc, ravdess
+    python scripts/fetch_data.py            # all three
+    python scripts/fetch_data.py bbc        # one of: bbc, ravdess, movielens
 
 Sources
 - BBC news, pre-processed term-document matrix (0.9 MB):
@@ -13,6 +13,11 @@ Sources
   https://zenodo.org/records/1188976
   S. R. Livingstone and F. A. Russo, "The Ryerson Audio-Visual Database of Emotional
   Speech and Song (RAVDESS)", PLoS ONE 13(5), 2018. CC BY-NC-SA 4.0.
+- MovieLens 100K, 100,000 film ratings (4.9 MB):
+  https://grouplens.org/datasets/movielens/100k/
+  F. M. Harper and J. A. Konstan, "The MovieLens Datasets: History and Context", ACM
+  Transactions on Interactive Intelligent Systems 5(4), 2015. Research use; not to be
+  redistributed.
 """
 import hashlib
 import sys
@@ -34,6 +39,12 @@ SOURCES = {
         "archive": "Audio_Speech_Actors_01-24.zip",
         "folder": "Audio_Speech_Actors_01-24",
         "sha256": "5d208e01632cc3e5242106fa2af3273e6dc5239fb8143131979ac74c4aa40657",
+    },
+    "movielens": {
+        "url": "https://files.grouplens.org/datasets/movielens/ml-100k.zip",
+        "archive": "ml-100k.zip",
+        "folder": "movielens",
+        "sha256": "50d2a982c66986937beb9ffb3aa76efe955bf3d5c6b761f4e3a7cd717c6a3229",
     },
 }
 

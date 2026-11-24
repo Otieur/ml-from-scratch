@@ -1,8 +1,8 @@
 """Loaders for the data sets used in the experiments.
 
 - Graduate admissions (400 applicants, 7 features): ships with the package.
-- BBC news (2,225 articles, 9,635 terms) and RAVDESS speech (1,440 clips): downloaded into
-  data/ by scripts/fetch_data.py.
+- BBC news (2,225 articles, 9,635 terms), RAVDESS speech (1,440 clips) and MovieLens 100K
+  (100,000 film ratings): downloaded into data/ by scripts/fetch_data.py.
 """
 import glob
 import os
@@ -15,6 +15,7 @@ DOWNLOADS = Path(__file__).resolve().parent.parent / "data"
 BBC_DIR = DOWNLOADS / "bbc"
 SPEECH_DIR = DOWNLOADS / "Audio_Speech_Actors_01-24"
 SPEECH_CACHE = DOWNLOADS / "speech_features.npz"
+MOVIELENS_DIR = DOWNLOADS / "movielens" / "ml-100k"
 
 
 # ------------------------------------------------------------------ graduate admissions
@@ -163,3 +164,29 @@ def log_mel(X):
     Z = np.array(X, dtype=np.float64)
     Z[:, N_CHROMA:] = np.log(Z[:, N_CHROMA:] + 1e-10)
     return Z
+
+
+# ------------------------------------------------------------------ MovieLens 100K
+
+def load_movielens(split=None, data_dir=MOVIELENS_DIR):
+    """100,000 ratings (1 to 5) of 1,682 films by 943 users.
+
+    Each line of the rating files is "user item rating timestamp", tab-separated, with
+    user and item numbers starting at 1; they are returned starting at 0.
+
+    Args:
+    - split (None or 1..5): None reads every rating (u.data). A number reads one of the five
+      predefined 80,000 / 20,000 splits (u1.base and u1.test, ...); the five test sets are
+      disjoint and together cover every rating.
+
+    Output:
+    - users, items (int ndarrays), ratings (float ndarray) when split is None;
+    - (users, items, ratings) for the training part and the same for the test part otherwise.
+    """
+    def read(name):
+        table = np.loadtxt(Path(data_dir) / name, dtype=np.int64)
+        return table[:, 0] - 1, table[:, 1] - 1, table[:, 2].astype(np.float64)
+
+    if split is None:
+        return read("u.data")
+    return read(f"u{split}.base"), read(f"u{split}.test")
